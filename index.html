@@ -1,32 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelio Proj.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M5.76282 17H13.083C13.0284 17.3252 13 17.6593 13 18C13 18.3407 13.0284 18.6748 13.083 19H6.45455L2 22.5V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V12.8027C21.3926 12.4513 20.7179 12.2034 20 12.083V5H4V18.3851L5.76282 17ZM23.9497 21.5355L22.4462 20.032C22.7981 19.4365 23 18.7418 23 18C23 15.7909 21.2091 14 19 14C16.7909 14 15 15.7909 15 18C15 20.2091 16.7909 22 19 22C19.7418 22 20.4365 21.7981 21.032 21.4462L22.5355 22.9497L23.9497 21.5355ZM21 18C21 19.1046 20.1046 20 19 20C17.8954 20 17 19.1046 17 18C17 16.8954 17.8954 16 19 16C20.1046 16 21 16.8954 21 18Z'%3E%3C/path%3E%3C/svg%3E">
+    <title>Service Search | Website</title>
 </head>
+
 <body>
 
-    <!-- Title -->
-    <h1 id="txt">Hallo Willkommen, bitte trage deinen namen unten im Textfeld ein!
-    </h1>
+    <nav class="navbar">
+        <a href="" target="_blank" class="logo">
+            <img src="images/logo.png" alt="">
+        </a>
+              <button onclick="window.open('/infos', '_blank')"><i class="ri-information-line""></i></button>
+    </nav>
 
-    <!-- Text-feld -->
-    <input class="tf" id="tb"></input>
 
-   <!--  Button -->
-    <button  id="btn" class="doc" >Klick Mich</button>
 
-    <button id="btn2" class="doc" >Klick v2</button>
+    <div class="hero">
+        <div class="left-section">
+            <div class="top">
+                <h2>Service Search</h2>
+                <p>
+                    Die beste Website, um die perfekte Firma für Ihr Anliegen zu finden!<br>Schnell, zuverlässig und genau auf Ihre Bedürfnisse abgestimmt." 
+                </p>
 
-    <!-- Verknüpfung zu der Javascript datei -->
-    <script src="/script.js"></script>
+                <div>
+                    <button onclick="window.location.href='/service'" class="doc">
+                      Start NOW<i class="ri-arrow-right-line"></i>
+                    </button>
+                  </div>
+            </div>
+            <div class="bottom">
+                <p>Other Socials:</p>
+                <div class="icons">
+                    <a target="_blank" href="https://www.tiktok.com/"><i class="ri-tiktok-fill"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/"><i class="ri-instagram-line"></i></a>
+                </div>
+            </div>
+        </div>
 
-    <!-- Einfüge einer CSS datei -->
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+        <img src="images/delivery_truck.png">
+
+    </div>
+
+    <div class="about">
+        <p>TOP 3 Services</p>
+        <h2>Here are the top 3 services</h2>
+        <div class="items">
+            <div class="item">
+                <div class="inner">
+                    <img src="images/" alt="">
+                    <a>#1 Service</a>
+                    <p>Soon !</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="inner">
+                    <img src="images/" alt="">
+                    <a>#2 Service</a>
+                    <p>Soon !</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="inner">
+                    <img src="images/" alt="">
+                    <a>#3 Service</a>
+                    <p>Soon !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="inner">
+            <h2>About US 👥</h2>
+            <p class="info">Here are some infoamuons abpouit the services.</p>
+            <!-- <button>SOON !<i class="ri-arrow-right-line"></i></button> -->
+
+            <div class="items">
+                <div class="item">
+                    <i class="ri-search-line"></i>
+                    <a>Suchen und Finden</a>
+                    <p>Find die besten Dienste für Ihre Anforderungen.</p>
+                </div>
+                <div class="item">
+                    <i class="ri-file-search-line"></i> 
+                    <a>Filtern und Sortieren</a>
+                    <p>nutze die Suchfunktion um die besten Dienste zu finden.</p>
+                </div>
+                <div class="item">
+                    <i class="ri-pages-line"></i> 
+                    <a>Anzeigen und Verwalten</a>
+                    <p>Die benutzerfläche ist einfach zu bedienen und die Anzeigen und Verwaltung ist sehr einfach.</p>
+                </div>
+                <div class="item">
+                    <i class="ri-question-line"></i>
+                    <a>Soon !</a>
+                    <p>Coming Soon !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h2>Sponsors <i class="ri-hand-heart-line"></i></h2>
+        <div class="items">
+            <div class="item">
+                <a>Deboticz Hosting <i class="ri-server-line"></i></a>
+                <p>Why use Deboticz Hosting ?<br><br>
+                    1) Since Deboticz offers many types of servers and with a very good performance.<br>
+                    2) Deboticz has an UPTIME of 99.99%.<br>
+                    3) Deboticz has very good and safe security measures such as a very strong DDOS Protection.<br>
+                    4) The operation and creation is very simple one, because it has a very clear GUI.
+                  </p>
+                  <button class="button" onclick="window.open('https://Deboticz.online/', '_blank')">Go to Deboticz Hosting</button>
+            </div>
+            <div class="item">
+                <a>Nino-OS Discord Bot <i class="ri-robot-2-line"></i></a>
+                <p>Why use the Nino-OS Discord Bot ?<br><br>
+                    1) The Nino-OS Bot is mostly free, but there are also advantages that you can get by buying a premium subscription.<br>
+                    2) Send a DM to the Nino-OS Bot and start a support email.<br>
+                    3) The Nino-OS Bot is online and available 24/7 for reliable service.<br>
+                    4) The Nino-OS Bot offers a wide range of commands, all of which are incredibly user-friendly and easy to use.
+                  </p>
+                <button class="button"  onclick="window.open('https://nino-os.deboticz.online/', '_blank')">Use the Nino-OS Bot</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a target="_blank" title="Soon !">Terms of Service</a>
+        <a target="_blank" title="Soon !">Privacy Policy</a>
+        <p>© 2024 Service Search.</p>
+    </footer>
+
 </body>
+
 </html>
-
-<img src="images/Download (5).jpeg" class="img-fluid" alt="Drachenlord"
-width="300px" height="200px"
-
