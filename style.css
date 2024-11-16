@@ -556,7 +556,7 @@ nav ul li a {
 button.doc {
   position: absolute;
   margin-left: 3%;
-  margin-top: -22%;
+  margin-top: -26%;
   padding: 10px 20px;
   border-radius: 40px;
   border: 1px solid #3cb7e7;
@@ -1051,7 +1051,7 @@ body {
 .services-header .pcimg  {
   width: 40%;
   margin-left: 60%;
-  margin-top: -20%;
+  margin-top: -16%;
 }
 
 .handyimg {
