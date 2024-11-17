@@ -275,8 +275,7 @@ h3 span {
 }
 
 .skills .skill-items .item {
-  background-color: rgb(43, 47, 72);
-
+  background-color: rgb(39, 39, 39);
   width: 25%;
   border-radius: 10px;
   padding: 32px;
@@ -415,6 +414,8 @@ h3 span {
   flex-direction: column;
   gap: 30px;
   padding: 20px 32px 42px;
+  background-color: rgb(39, 39, 39);
+  border-radius: 10px;
 }
 
 .portfolio .portfo-items .item .info p {
@@ -703,7 +704,8 @@ button.doc:active {
   }
 
   button.doc {
-    margin-left: 40px;
+    margin-left: 70px;
+    margin-top: -66px;
   }
 
   button.doc:before {
