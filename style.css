@@ -652,6 +652,12 @@ button.doc:active {
     font-size: 18px;
   }
 
+  @media (max-width: 768px) {
+    #snowfall {
+      pointer-events: none;
+    }
+  }
+
   .main .left h3 {
     font-size: 36px;
   }
