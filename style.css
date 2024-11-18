@@ -652,10 +652,17 @@ button.doc:active {
     font-size: 18px;
   }
 
-  @media (max-width: 768px) {
-    #snowfall {
-      position: absolute;
-      pointer-events: none;
+body {
+    touch-action: none; /* Verhindert, dass Touch-Ereignisse die Schneeflocken beeinflussen */
+  }
+  
+  .snowflake {
+    pointer-events: none; /* Verhindert Interaktionen mit den Schneeflocken */
+  }
+  
+@media (max-width: 768px) {
+    .snowflake {
+      touch-action: none; /* Speziell für mobile Geräte */
     }
   }
 
