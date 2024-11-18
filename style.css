@@ -652,20 +652,6 @@ button.doc:active {
     font-size: 18px;
   }
 
-body {
-    touch-action: none; /* Verhindert, dass Touch-Ereignisse die Schneeflocken beeinflussen */
-  }
-  
-  .snowflake {
-    pointer-events: none; /* Verhindert Interaktionen mit den Schneeflocken */
-  }
-  
-@media (max-width: 768px) {
-    .snowflake {
-      touch-action: none; /* Speziell für mobile Geräte */
-    }
-  }
-
   .main .left h3 {
     font-size: 36px;
   }
