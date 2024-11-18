@@ -654,6 +654,7 @@ button.doc:active {
 
   @media (max-width: 768px) {
     #snowfall {
+      position: absolute;
       pointer-events: none;
     }
   }
