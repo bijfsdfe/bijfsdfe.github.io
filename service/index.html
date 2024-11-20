@@ -1,18 +1,392 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M5.76282 17H13.083C13.0284 17.3252 13 17.6593 13 18C13 18.3407 13.0284 18.6748 13.083 19H6.45455L2 22.5V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V12.8027C21.3926 12.4513 20.7179 12.2034 20 12.083V5H4V18.3851L5.76282 17ZM23.9497 21.5355L22.4462 20.032C22.7981 19.4365 23 18.7418 23 18C23 15.7909 21.2091 14 19 14C16.7909 14 15 15.7909 15 18C15 20.2091 16.7909 22 19 22C19.7418 22 20.4365 21.7981 21.032 21.4462L22.5355 22.9497L23.9497 21.5355ZM21 18C21 19.1046 20.1046 20 19 20C17.8954 20 17 19.1046 17 18C17 16.8954 17.8954 16 19 16C20.1046 16 21 16.8954 21 18Z'%3E%3C/path%3E%3C/svg%3E">
-        <title>Service Search | 404</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+        />
+        <link rel="icon" href="images/search.png" />
+        <link rel="manifest" href="images/site.webmanifest" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Service Search | Service</title>
+    
+        <meta name="keywords" content="service search, service, search, find, best, service finder, service finder app, service finder website, service finder app website, find service, find service app, find service website, best service, best service app, best service website, service search app, service search website, search service, search service app, search service website, app service search, website service search, app service, website service, app search service, website search service, dienstleistungs suche, dienstleistungen, dienstleistungen bewerben, service bewerben" />
+        <meta content="Service Search" property="og:title" />
+        <meta content="The Website to find your best service 🌐" property="og:description" />
+        <meta content="https://service-search.net" property="og:url" />
         <meta
-        http-equiv="refresh"
-        content="0;url=https://Service-Search.net"
-      />
-    </head>
-  <body>
-    <a href="https://Service-Search.net"></a>
-  </body>
+          content="https://https://service-search.net/images/logo.png"
+          property="og:image"
+        />
+        <meta content=" rgb(43, 47, 72)" data-react-helmet="true" name="theme-color" />
+      </head>
+<body>
+
+    <nav class="navbar">
+        <a href="https://service-search.net/" target="_blank" class="logo">
+            <img src="images/logo.png" alt="">            
+        </a>
+        <button class="open-menu" id="activeIcon"><i class="ri-menu-line"></i></button>
+        <div class="nav-links">
+        
+            <div class="dropdown">
+                <button class="dropdown-button" id="more" onclick="toggleDropdown('more')">
+                    More
+                    <span id="ico"><i class="ri-arrow-drop-down-line"></i></span>
+                </button>
+                <div class="dropdown-content" id="more-dropdown">
+                    <a href="https://status.service-search.net/">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                        Status Page
+                    </a>
+                    <br>
+                    <a href="https://instagram.com/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"></path>
+                          </svg>
+                          
+                        Instagram
+                    </a>
+                    <br>
+                    <a href="https://status.service-search.net/">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                        Status Page
+                    </a>
+                    <br>
+                    <a href="https://g.co/kgs/TxSzrDC">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                            <path d="M3.06364 7.50914C4.70909 4.24092 8.09084 2 12 2C14.6954 2 16.959 2.99095 18.6909 4.60455L15.8227 7.47274C14.7864 6.48185 13.4681 5.97727 12 5.97727C9.39542 5.97727 7.19084 7.73637 6.40455 10.1C6.2045 10.7 6.09086 11.3409 6.09086 12C6.09086 12.6591 6.2045 13.3 6.40455 13.9C7.19084 16.2636 9.39542 18.0227 12 18.0227C13.3454 18.0227 14.4909 17.6682 15.3864 17.0682C16.4454 16.3591 17.15 15.3 17.3818 14.05H12V10.1818H21.4181C21.5364 10.8363 21.6 11.5182 21.6 12.2273C21.6 15.2727 20.5091 17.8363 18.6181 19.5773C16.9636 21.1046 14.7 22 12 22C8.09084 22 4.70909 19.7591 3.06364 16.4909C2.38638 15.1409 2 13.6136 2 12C2 10.3864 2.38638 8.85911 3.06364 7.50914Z"></path>
+                          </svg>
+                        Bei Google
+                    </a>
+                    <br>
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM13 13.3551C14.4457 12.9248 15.5 11.5855 15.5 10C15.5 8.067 13.933 6.5 12 6.5C10.302 6.5 8.88637 7.70919 8.56731 9.31346L10.5288 9.70577C10.6656 9.01823 11.2723 8.5 12 8.5C12.8284 8.5 13.5 9.17157 13.5 10C13.5 10.8284 12.8284 11.5 12 11.5C11.4477 11.5 11 11.9477 11 12.5V14H13V13.3551Z"></path></svg>
+                        MORE SOON !
+                    </a>
+                    <br>
+                    <br>
+                    <a id="close-btn" class="close-btn"><i class="ri-close-fill"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="window.open('https://www.instagram.com/', '_blank')" id="btn-rest" class="btn btn-primary"><i class="ri-instagram-line"></i></button>
+        </div>
+    </nav>
+
+                <!-- Snowfall -->
+                <canvas id="snowfall"></canvas>
+
+    <header class="services-header">
+        <h1>Service Search</h1>
+        <h3>Die beste Website, um die perfekte Dienstleistung für Ihr Anliegen zu finden 🌐</h3>
+        <img class="pcimg" src="images/search.png" alt="">
+    </header>
+
+
+    <div class="buttons">
+
+        <button onclick="window.location.href='https://service-search.net/'" class="doc">
+          GO BACK <i class="ri-arrow-right-line"></i>
+        </button>
+
+        <img class="handyimg" src="images/search.png" alt="">
+
+
+        <div class="socialICO">
+        <p class="iconTXT" >Other Socials:</p>
+        <div class="icons">
+            <a target="_blank" href="https://www.tiktok.com/"><i class="ri-tiktok-fill"></i></a>
+            <a target="_blank" href="https://www.instagram.com/"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+
+    <section class="showcase">
+
+        <div class="showcase__header">
+            <h3>Hier sind ein paar dienstleistungen:</h3>
+            <button class="btn">See My Work</button>
+        </div>
+
+        <div class="showcase_categories">
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <h1><i class="ri-question-fill"></i> Soon !</h1>
+                    </div>
+                    <div class="category__desc">
+                        <p>Soon !</p>
+                    </div>
+                </div>
+
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="assets/item-1.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-2." class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-3.jpg" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-4.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                </div>
+
+            </section>
+            <br>
+            <br>
+            <br>
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <h1><i class="ri-question-fill"></i> Soon !</h1>
+                    </div>
+                    <div class="category__desc">
+                        <p>Soon !</p>
+                    </div>
+                </div>
+
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="assets/item-1.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-2." class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-3.jpg" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-4.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                </div>
+
+            </section>
+            <br>
+            <br>
+            <br>
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <h1><i class="ri-question-fill"></i> Soon !</h1>
+                    </div>
+                    <div class="category__desc">
+                        <p>Soon !</p>
+                    </div>
+                </div>
+
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="assets/item-1.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-2." class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-3.jpg" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-4.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                </div>
+
+            </section>
+            <br>
+            <br>
+            <br>
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <h1><i class="ri-question-fill"></i> Soon !</h1>
+                    </div>
+                    <div class="category__desc">
+                        <p>Soon !</p>
+                    </div>
+                </div>
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="assets/item-5.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-6.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-7.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/item-8.png" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Soon !</h5>
+                            <!-- <p>August 2023</p> -->
+                        </div>
+                        <p class="project-card__desc">Soon !</p>
+                        <button class="btn">View Soon !</button>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="top">
+            <div class="social-links">
+                <a target="_blank" href="https://www.tiktok.com/"><i class="ri-tiktok-fill"></i></a>
+                <a target="_blank" href="https://www.instagram.com/"><i class="ri-instagram-line"></i></a>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="bottom">
+
+            <audio id="song">
+                <source src="images/gewonnen.mp3" type="audio/mpeg">
+            </audio>
+
+            
+            <p id="trigger">
+                All Rights Reserved. © 2024 <!-- - <span class="year"></span> --> Build by Robotic Germany and Nelio
+            </p>
+            <script>
+
+                let clickCount = 0;
+
+                document.getElementById("trigger").addEventListener("click", function () {
+                clickCount++;
+
+                    if (clickCount === 20) {
+                        let audio = document.getElementById("song");
+                        audio.volume = 0.2;
+                        audio.play();
+                        
+                    } else if (clickCount === 30) {
+                        let audio = document.getElementById("song");
+                        audio.currentTime = 0;
+                        audio.pause();
+                    }
+
+                });;
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.querySelector('.year').textContent = new Date().getFullYear();
+                });
+            </script>
+            
+            <div class="footertext">
+                <h2>"One day or <span class="highlight">day one</span>. You <span class="highlight">decide</span>." – Jeff Bezos</h2>
+            </div>
+
+            <div class="links">
+                <a title="soon" href="">Privacy Policy</a>
+                <a title="soon" href="">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
