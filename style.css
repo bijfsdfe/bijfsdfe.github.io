@@ -546,21 +546,20 @@ footer .bottom .links a {
   cursor: pointer;
 }
 
-/* Allgemeine Textgestaltung */
 .footertext {
-  font-family: Arial, sans-serif; /* Schriftart */
-  font-size: 24px; /* Standard-Schriftgröße */
-  font-weight: bold; /* Fettschrift */
-  color: white; /* Textfarbe */
-  text-align: center; /* Zentrierung */
-  margin: 20px; /* Abstand */
-  letter-spacing: 1px; /* Buchstabenabstand */
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  letter-spacing: 1px;
 }
 
-/* Blaue Kontur für "day one" und "you decide" */
+
 .highlight {
-  color: transparent; /* Innere Textfarbe */
-  -webkit-text-stroke: 1.5px rgb(0, 162, 255); /* Blaue Kontur */
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgb(0, 162, 255);
 }
 
 nav ul li a {
@@ -721,7 +720,7 @@ button.doc:active {
   }
 
   button.doc {
-    margin-left: 70px;
+    margin-left: 26px;
     margin-top: -66px;
   }
 
