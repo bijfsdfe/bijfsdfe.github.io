@@ -24,24 +24,27 @@
 
         <script>
             window.onload = function() {
+                // Überprüfen, ob eine gespeicherte Scroll-Position vorhanden ist
                 let scrollPosition = localStorage.getItem("scrollPosition");
     
                 if (scrollPosition !== null) {
+                    // Scrollen auf die gespeicherte Position
                     window.scrollTo(0, scrollPosition);
-                
                 } else {
+                    // Langsame Scroll-Animation zu showcase_categories
                     const element = document.getElementById("showcase_categories");
                     if (element) {
-                        smoothScrollTo(element, 1000);
+                        smoothScrollTo(element, 1000); // 1000ms für langsames Scrollen
                     }
                 }
             }
     
             window.onbeforeunload = function() {
-               
+                // Speichern der aktuellen Scroll-Position
                 localStorage.setItem("scrollPosition", window.scrollY);
             }
     
+            // Funktion für langsames Scrollen
             function smoothScrollTo(element, duration) {
                 const targetPosition = element.offsetTop;
                 const startPosition = window.scrollY;
@@ -54,7 +57,7 @@
                     const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
                     window.scrollTo(0, run);
                     if (timeElapsed < duration) requestAnimationFrame(animation);
-                    else window.scrollTo(0, targetPosition);
+                    else window.scrollTo(0, targetPosition); // Sicherstellen, dass wir am Ziel ankommen
                 }
     
                 function easeInOutQuad(t, b, c, d) {
@@ -72,7 +75,7 @@
 
     <nav class="navbar">
         <a href="https://service-search.net/" target="_blank" class="logo">
-            <img src="images/logo.png" alt="">            
+            <img src="images/logo.png" alt="">      
         </a>
         <button class="open-menu" id="activeIcon"><i class="ri-menu-line"></i></button>
         <div class="nav-links">
